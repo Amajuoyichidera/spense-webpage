@@ -9,6 +9,7 @@ body {
     font-family: 'Cabin', sans-serif;
     scroll-behavior: smooth;
     line-height: 4vh;
+    width: 100%;
 }
 .sec1 {
     background-color: #F0EEEB;
@@ -140,10 +141,6 @@ input {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.sec5 p {
-    font-weight: lighter;
-    font-size: small;
-}
 .com, .site {
     display: flex;
     gap: 160px;
@@ -153,15 +150,21 @@ input {
     padding-bottom: 7px;
 }
 @media screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     body {
-        width: 100%;
         line-height: 4vh;
+        width: fit-content;
+        scroll-behavior: smooth;
     }
     .one :not(:first-child) {
         display: none;
     }
     .one h5 {
         font-size: 5vh;
+        font-style: italic;
     }
     .four {
         display: flex;
@@ -185,8 +188,11 @@ input {
         background-color: #F0EEEB;
         margin: 0;
         padding: 0;
-        width: 100%;
+        word-wrap: break-word;
         font-size: 2vh;
+    }
+    .escrow {
+        width: 100%;
     }
     .phone {
         height: 27vh;
@@ -200,16 +206,15 @@ input {
         padding-left: 15px;
     }
     .sec4 img {
-        margin: 0;
-        padding: 0;
-        height: 40vh;
-        width: 115vw;
-        margin-left: -50px;
+        margin-left: -90px;
+        height: 60vh;
+        width: 130vw;
     }
     .sec5 {
         display: flex;
         flex-direction: column;
         padding-left: 20px;
+        width: 100%;
     }
     .sec5 h4 {
         font-size: 2.5vh;
@@ -222,7 +227,7 @@ input {
     .hero {
         padding: 10px;
         height: 40vh;
-        width: 90vw;
+        width: 95vw;
     }
     .four h1 {
         font-size: 3vh;
@@ -239,7 +244,94 @@ input {
         padding-right: 15px;
     }
 }
-
-@media screen and (max-width: 768px) {
-    
+@media screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        line-height: 4vh;
+        width: fit-content;
+    }
+    .one :not(:first-child) {
+        display: none;
+    }
+    .one h5 {
+        font-size: 5vh;
+    }
+    .four {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 2vh;
+    }
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sec2 img {
+        height: 3vh;
+        width: 20vw;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        background-color: #F0EEEB;
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+        font-size: 2vh;
+    }
+    .escrow {
+        width: 100%;
+    }
+    .phone {
+        height: 27vh;
+        width: 100vw;
+        margin-left: -400px;
+    }
+    .sec4 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -50px;
+        padding-left: 15px;
+    }
+    .sec4 img {
+        height: 70vh;
+        width: 120vw;
+        margin-left: -110px;
+    }
+    .sec5 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        width: 100%;
+    }
+    .sec5 h4 {
+        font-size: 2.5vh;
+    }
+    .com, .site {
+        display: flex;
+        gap: 100px;
+        padding-bottom: 10px;
+    }
+    .hero {
+        padding: 10px;
+        height: 40vh;
+        width: 95vw;
+    }
+    .four h1 {
+        font-size: 3vh;
+        line-height: 3vh;
+    }
+    .spense {
+        padding-bottom: 20px;
+    }
+    input {
+        padding: 5px;
+    }
+    .sec1 {
+        padding-left: 10px;
+        padding-right: 15px;
+    }
 }
